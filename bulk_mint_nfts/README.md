@@ -36,7 +36,15 @@ This project can be used to deploy smart contract in two ways:
 
 6. Now upload `metadata` folder to Pinata and grab CID.
 
-7. Either deploy contract using remix (follow the youtube tutorial on above link ) or deploy via terminal:  
+7. Either deploy contract using remix (follow the youtube tutorial on above link ) or deploy via terminal:
+8. For the remix way just look at this and forget the rest below:
+   -  Simplified Usage Instructions
+
+    -  Copy and Paste ArtCollectible.sol and remix_scripts/bulk_mint_nfts.js to your remix browser and connect
+   to the appropriate blockchain. Fix the scripts accordingly. Remember to upload the entire folder of NFTs to pinata and copy the CID to the ArtCollectible.sol to be able to appropriately do so.
+
+    -  deploy ArtCollectible.sol using the deploy button then right click bulk_mint_nfts.js and click run to run the script.
+9. This is if you want to use the terminal, which is much tougher and tedious.
    Update the metadata CID in `ArtCollectible.sol` inside constructor.  
    Update Rinkeby test network details in `truffle-config.js` .  
    Update your account mnemonic in `.env` file.  
@@ -46,4 +54,4 @@ This project can be used to deploy smart contract in two ways:
    Run `await art.mintBatch([1,2,3,4,5],[1,1,1,1,1])`  
    Enter `art.address` to get contract address.
 
-8. Update `totalNfts` variable in `scripts/bulk_mint_nfts.js` to the amount of Nft's you want to mint and run it `node scripts/bulk_mint_nfts.js` to batch mint Nft's.
+9. Update `totalNfts` variable in `scripts/bulk_mint_nfts.js` to the amount of Nft's you want to mint and run it `node scripts/bulk_mint_nfts.js` to batch mint Nft's.
